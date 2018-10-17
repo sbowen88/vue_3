@@ -2,27 +2,34 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h3>{{header}}</h3>
-    <p>Enter in your hobby</p>
-    <input type="text">
+<input v-model="first_message" placeholder="edit me">
+<p class = 'first_message'>Message is: {{ first_message }}</p>
+<span>Multiline message is:</span>
+<p style="white-space: pre-line;">{{ message }}</p>
+<br>
+<textarea v-model="message" placeholder="add multiple lines"></textarea>
 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
+  name: "HelloWorld",
+  data() {
     return {
-      msg: 'Third Vue App',
-      header: 'Get started',
-    }
+      msg: "Third Vue App",
+      header: "Get started",
+      first_message: "",
+      message: ""
+    };
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
@@ -35,5 +42,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.first_message{
+  color: pink;
 }
 </style>
