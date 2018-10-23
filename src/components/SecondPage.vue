@@ -8,6 +8,8 @@
 <p style="white-space: pre-line;">{{ message }}</p>
 <br>
 <textarea v-model="message" placeholder="add multiple lines"></textarea>
+<br>
+        <router-link to="/">Go to Home Page</router-link>
 
   </div>
 </template>
@@ -42,8 +44,9 @@ li {
 }
 a {
   color: #42b983;
+  text-decoration: none;
 }
-.first_message{
+.first_message {
   color: red;
 }
 </style>

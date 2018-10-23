@@ -8,6 +8,8 @@
 <p style="white-space: pre-line;">{{ message }}</p>
 <br>
 <textarea v-model="message" placeholder="add multiple lines"></textarea>
+<br>
+<router-link to="/second_page">Navigate to Page 2</router-link>
 
   </div>
 </template>
